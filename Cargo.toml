@@ -1,0 +1,18 @@
+[package]
+name = "fast-mem-cleaner"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+winapi = { version = "0.3", features = [
+    "memoryapi",
+    "processthreadsapi",
+    "securitybaseapi",
+    "winbase",
+    "winnt",
+    "psapi",
+] }
+ntapi = "0.4"
+sysinfo = "0.39.5"
+thiserror = "2.0.18"
+bitflags = "2.6"
