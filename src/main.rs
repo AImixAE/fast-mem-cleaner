@@ -1,6 +1,7 @@
 mod memory_cleaner;
 
 use memory_cleaner::{CleanScope, MemoryCleaner, MemoryInfo};
+use std::io::Read;
 use std::time::Duration;
 
 fn main() {
@@ -57,4 +58,7 @@ fn main() {
 
     println!("");
     println!("=== 完成 ===");
+
+    println!("按 Enter 键退出...");
+    std::io::stdin().read(&mut [0u8]).unwrap();
 }
